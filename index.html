@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Finish Renovations | Complete Home & Commercial Renovations Toronto & GTA</title>
     <meta name="description" content="Super Finish Renovations delivers high-quality craftsmanship for home and commercial renovations across Toronto and the GTA. Expert drywall, kitchens, bathrooms, and painting.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="images/hero-banner.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,6 +31,9 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
+        <div class="hero-media" aria-hidden="true">
+            <img src="images/hero_image.jpg" alt="" fetchpriority="high" loading="eager" decoding="sync" width="1024" height="1024">
+        </div>
         <div class="hero-content">
             <h1>Complete Home Renovations in Toronto & the GTA – Built Right. Finished Perfectly.</h1>
             <p>From full home renovations to drywall, kitchens, and bathrooms, Super Finish Renovations delivers high-quality craftsmanship for homeowners and commercial properties across the GTA.</p>
@@ -301,25 +307,6 @@
             navList.classList.toggle('active');
         });
 
-        // Intersection Observer for reveal on scroll
-        const revealOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, revealOptions);
-
-        document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
-            revealObserver.observe(el);
-        });
-
         // Scroll to Top Button Visibility
         const scrollTopBtn = document.getElementById('scrollTopBtn');
         window.addEventListener('scroll', () => {
@@ -337,19 +324,6 @@
             });
         });
 
-        // Page Fade-out Transition on Link Click
-        document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', e => {
-                const href = link.getAttribute('href');
-                if (href && !href.startsWith('#') && !href.startsWith('tel:') && !href.startsWith('mailto:') && !link.target) {
-                    e.preventDefault();
-                    document.body.classList.add('page-fade-out');
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 400);
-                }
-            });
-        });
     </script>
 </body>
 </html>

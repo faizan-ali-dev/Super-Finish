@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Super Finish Renovations – Toronto & GTA</title>
     <meta name="description" content="Get a free renovation quote from Super Finish Renovations. Contact us for kitchens, bathrooms, basements, drywall, and full home renovations in Toronto and the GTA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -170,25 +172,6 @@
             navList.classList.toggle('active');
         });
 
-        // Intersection Observer for reveal on scroll
-        const revealOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, revealOptions);
-
-        document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
-            revealObserver.observe(el);
-        });
-
         // Scroll to Top Button Visibility
         const scrollTopBtn = document.getElementById('scrollTopBtn');
         window.addEventListener('scroll', () => {
@@ -203,20 +186,6 @@
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
-            });
-        });
-
-        // Page Fade-out Transition on Link Click
-        document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', e => {
-                const href = link.getAttribute('href');
-                if (href && !href.startsWith('#') && !href.startsWith('tel:') && !href.startsWith('mailto:') && !link.target) {
-                    e.preventDefault();
-                    document.body.classList.add('page-fade-out');
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 400);
-                }
             });
         });
 

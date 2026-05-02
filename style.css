@@ -31,8 +31,6 @@ body {
     background-color: var(--bg-white);
     line-height: 1.6;
     overflow-x: hidden;
-    opacity: 0; /* For page fade-in transition */
-    animation: pageFadeIn 0.8s ease forwards;
 }
 
 /* ============================================
@@ -210,15 +208,15 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/Hero-image.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #17324f, #0b1d34);
     color: white;
     padding: 80px 5% 50px;
     max-width: none;
     margin: 0;
     overflow: hidden;
     position: relative;
+    isolation: isolate;
+    background-color: #06192e;
 }
 
 .hero::before {
@@ -228,28 +226,43 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: inherit;
+    background: linear-gradient(135deg, rgba(11, 29, 52, 0.58), rgba(23, 50, 79, 0.34));
     z-index: -1;
-    animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+.hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1.02);
+    animation: heroKenBurns 24s ease-in-out infinite alternate;
+    will-change: transform;
 }
 
 .hero-content {
     max-width: 100%;
     padding: 0 2%;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content h1 {
     font-size: clamp(1.75rem, 6vw, 4rem);
     margin-bottom: 16px;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
 .hero-content p {
     font-size: clamp(0.95rem, 2.5vw, 1.35rem);
     margin-bottom: 28px;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 0.4s forwards;
 }
 
 .cta-group {
@@ -259,8 +272,6 @@ header {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 0.6s forwards;
 }
 
 .btn {
@@ -339,6 +350,7 @@ header {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    will-change: transform;
 }
 
 .service-card:hover {
@@ -494,6 +506,7 @@ header {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    will-change: transform;
 }
 
 .project-card:hover {
@@ -577,6 +590,13 @@ header {
     min-height: 40px;
     display: flex;
     align-items: center;
+    transition: var(--transition);
+}
+
+.area-tag:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 71, 171, 0.35);
+    box-shadow: 0 8px 18px rgba(0, 71, 171, 0.08);
 }
 
 /* ============================================
@@ -604,6 +624,7 @@ header {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     transition: var(--transition);
     position: relative;
+    will-change: transform;
 }
 
 .testimonial-card:hover {
@@ -618,6 +639,7 @@ header {
     opacity: 0.2;
     font-family: Georgia, serif;
     margin-bottom: -8px;
+    animation: quoteDrift 6s ease-in-out infinite alternate;
 }
 
 .testimonial-review {
@@ -671,6 +693,9 @@ header {
    ============================================ */
 .contact-section {
     background: var(--primary-dark);
+    background-image: linear-gradient(120deg, var(--primary-dark), var(--primary), #0066cc);
+    background-size: 200% 200%;
+    animation: gradientShift 16s ease-in-out infinite alternate;
     color: white;
     text-align: center;
     padding: 60px 4%;
@@ -703,6 +728,8 @@ header {
     justify-content: center;
     text-align: center;
     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    background-size: 200% 200%;
+    animation: gradientShift 16s ease-in-out infinite alternate;
     color: white;
     padding: 100px 5% 50px;
     max-width: none;
@@ -739,6 +766,12 @@ header {
     border-radius: 16px;
     padding: 28px 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+}
+
+.contact-form-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
 }
 
 .contact-form-wrapper h2 {
@@ -826,6 +859,12 @@ header {
     border-radius: 16px;
     padding: 28px 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
 }
 
 .contact-info-card h3 {
@@ -851,6 +890,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--transition);
+}
+
+.info-item:hover .info-icon {
+    transform: translateY(-2px) scale(1.04);
+    background: rgba(0, 71, 171, 0.08);
 }
 
 .info-item a {
@@ -897,6 +942,12 @@ header {
     border-radius: 16px;
     padding: 24px 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+}
+
+.map-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
 }
 
 .map-wrapper h3 {
@@ -941,6 +992,7 @@ footer {
 
 .footer-links a:hover {
     color: white;
+    transform: translateY(-2px);
 }
 
 .footer-keywords {
@@ -953,20 +1005,6 @@ footer {
 
 .footer-keywords span {
     font-size: clamp(0.65rem, 1.5vw, 0.8rem);
-}
-
-/* ============================================
-   ANIMATIONS
-   ============================================ */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* ============================================
@@ -1357,37 +1395,6 @@ footer {
     }
 }
 
-/* ============================================
-   REVEAL ON SCROLL
-   ============================================ */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.reveal-stagger > * {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.reveal-stagger.active > * {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.reveal-stagger.active > *:nth-child(1) { transition-delay: 0.1s; }
-.reveal-stagger.active > *:nth-child(2) { transition-delay: 0.2s; }
-.reveal-stagger.active > *:nth-child(3) { transition-delay: 0.3s; }
-.reveal-stagger.active > *:nth-child(4) { transition-delay: 0.4s; }
-.reveal-stagger.active > *:nth-child(5) { transition-delay: 0.5s; }
-
 /* Scroll to Top Button */
 .scroll-top {
     position: fixed;
@@ -1426,31 +1433,30 @@ footer {
 /* ============================================
    ADDITIONAL ANIMATION KEYFRAMES
    ============================================ */
-@keyframes pageFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 @keyframes slideDownNav {
     from { transform: translateY(-100%); }
     to { transform: translateY(0); }
 }
 
-@keyframes kenBurns {
+@keyframes heroKenBurns {
     from { transform: scale(1); }
     to { transform: scale(1.1); }
+}
+
+@keyframes gradientShift {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 50%; }
+}
+
+@keyframes quoteDrift {
+    from { transform: translateY(0); }
+    to { transform: translateY(-4px); }
 }
 
 @keyframes pulseGlow {
     0% { box-shadow: 0 0 0 0 rgba(0, 71, 171, 0.4); }
     70% { box-shadow: 0 0 0 15px rgba(0, 71, 171, 0); }
     100% { box-shadow: 0 0 0 0 rgba(0, 71, 171, 0); }
-}
-
-/* Page fade out */
-.page-fade-out {
-    opacity: 0 !important;
-    transition: opacity 0.4s ease !important;
 }
 
 /* Reduced Motion */
