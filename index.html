@@ -10,14 +10,20 @@
 <body>
 
     <header>
-        <div class="logo">Super Finish <span>Renovations</span></div>
-        <div class="menu-toggle" id="mobile-menu" style="display: none; font-size: 1.5rem; cursor: pointer;">☰</div>
+        <a href="index.html" class="logo">Super Finish <span>Renovations</span></a>
         <nav class="nav-links" id="nav-list">
             <a href="#services">Services</a>
             <a href="#why-us">Why Choose Us</a>
             <a href="#projects">Projects</a>
-            <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; border-radius: 5px;">Free Quote</a>
+            <a href="#testimonials-section">Testimonials</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="btn btn-primary nav-cta">Free Quote</a>
         </nav>
+        <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <!-- HERO SECTION -->
@@ -26,7 +32,7 @@
             <h1>Complete Home Renovations in Toronto & the GTA – Built Right. Finished Perfectly.</h1>
             <p>From full home renovations to drywall, kitchens, and bathrooms, Super Finish Renovations delivers high-quality craftsmanship for homeowners and commercial properties across the GTA.</p>
             <div class="cta-group">
-                <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+                <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
                 <a href="tel:4168224701" class="btn btn-outline">Call Now: 416-822-4701</a>
             </div>
             <div class="trust-line">
@@ -37,16 +43,16 @@
     </section>
 
     <!-- OUR SERVICES -->
-    <section id="services" class="container">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">Our Expert Services</h2>
-        <div class="services-grid">
+    <section id="services" class="container reveal">
+        <h2 style="text-align: center; margin-bottom: 40px;">Our Expert Services</h2>
+        <div class="services-grid reveal-stagger">
             <!-- Full Renovations -->
             <div class="service-card">
                 <div class="service-img" style="background-image: url('images/service-full-reno.png');"></div>
                 <div class="service-info">
                     <h3>Full Renovations</h3>
                     <p>Complete home and commercial renovations in the GTA. We manage everything from demolition to final finishes, delivering turnkey renovation solutions tailored to your vision.</p>
-                    <a href="#contact" class="btn-text">Request a Renovation Estimate →</a>
+                    <a href="contact.html" class="btn-text">Request a Renovation Estimate →</a>
                 </div>
             </div>
             <!-- Bathroom -->
@@ -55,7 +61,7 @@
                 <div class="service-info">
                     <h3>Bathroom Renovations</h3>
                     <p>Upgrade your bathroom with modern, functional designs built for comfort and long-term value. Spa-like finishes and professional tiling.</p>
-                    <a href="#contact" class="btn-text">Book a Bathroom Consultation →</a>
+                    <a href="contact.html" class="btn-text">Book a Bathroom Consultation →</a>
                 </div>
             </div>
             <!-- Kitchen -->
@@ -64,7 +70,7 @@
                 <div class="service-info">
                     <h3>Kitchen Renovations</h3>
                     <p>Custom kitchens designed for style, efficiency, and everyday living—perfect for homes and rental properties.</p>
-                    <a href="#contact" class="btn-text">Start Your Kitchen Upgrade →</a>
+                    <a href="contact.html" class="btn-text">Start Your Kitchen Upgrade →</a>
                 </div>
             </div>
             <!-- Painting -->
@@ -73,7 +79,7 @@
                 <div class="service-info">
                     <h3>Painting Services</h3>
                     <p>Professional interior & exterior painting for homes, offices, and commercial units across the GTA.</p>
-                    <a href="#contact" class="btn-text">Get a Painting Quote →</a>
+                    <a href="contact.html" class="btn-text">Get a Painting Quote →</a>
                 </div>
             </div>
             <!-- Drywall -->
@@ -82,14 +88,14 @@
                 <div class="service-info">
                     <h3>Drywall, Framing & Taping</h3>
                     <p>Expert drywall installation, framing, and finishing for perfect walls and strong structures.</p>
-                    <a href="#contact" class="btn-text">Contact a Drywall Specialist →</a>
+                    <a href="contact.html" class="btn-text">Contact a Drywall Specialist →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- WHY CHOOSE US -->
-    <section id="why-us" class="why-us">
+    <section id="why-us" class="why-us reveal">
         <div class="why-grid">
             <div class="why-content">
                 <h2>Why Choose Super Finish Renovations?</h2>
@@ -101,8 +107,8 @@
                     <li>100% Customer Satisfaction</li>
                 </ul>
                 <div class="cta-group" style="justify-content: flex-start;">
-                    <a href="#projects" class="btn btn-primary">See Our Work</a>
-                    <a href="#contact" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Request References</a>
+                    <a href="#our-projects" class="btn btn-primary">See Our Work</a>
+                    <a href="contact.html" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Request References</a>
                 </div>
             </div>
             <div class="why-image">
@@ -112,10 +118,10 @@
     </section>
 
     <!-- BEFORE & AFTER -->
-    <section id="projects" class="container">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 10px;">Real Results. Real Transformations.</h2>
+    <section id="projects" class="container reveal">
+        <h2 style="text-align: center; margin-bottom: 10px;">Real Results. Real Transformations.</h2>
         <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">Witness the quality of our craftsmanship through these recent projects.</p>
-        <div class="showcase-grid">
+        <div class="showcase-grid reveal-stagger">
             <div class="showcase-item">
                 <img src="images/before-after-1.png" alt="Kitchen Before and After">
             </div>
@@ -126,8 +132,49 @@
                 <img src="images/before-after-3.png" alt="Living Room Before and After">
             </div>
         </div>
+    </section>
+
+    <!-- OUR PROJECTS -->
+    <section id="our-projects" class="container reveal">
+        <h2 style="text-align: center; margin-bottom: 10px;">Our Projects</h2>
+        <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">A selection of recent renovation projects across the Greater Toronto Area.</p>
+        <div class="projects-grid reveal-stagger">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop" alt="Kitchen Renovation North York">
+                    <span class="project-location-badge">North York</span>
+                </div>
+                <div class="project-info">
+                    <h3>Kitchen Renovation</h3>
+                    <p class="project-location">📍 North York, Toronto</p>
+                    <p>Modern kitchen remodel with custom cabinets and quartz countertops. Full demolition and rebuild with premium finishes and new appliance integration.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop" alt="Basement Finishing Mississauga">
+                    <span class="project-location-badge">Mississauga</span>
+                </div>
+                <div class="project-info">
+                    <h3>Basement Finishing</h3>
+                    <p class="project-location">📍 Mississauga, ON</p>
+                    <p>Full basement conversion into a living space with professional drywall, luxury vinyl flooring, and pot lights throughout. A complete transformation.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=400&fit=crop" alt="Bathroom Remodel Scarborough">
+                    <span class="project-location-badge">Scarborough</span>
+                </div>
+                <div class="project-info">
+                    <h3>Bathroom Remodel</h3>
+                    <p class="project-location">📍 Scarborough, Toronto</p>
+                    <p>Complete bathroom gut and rebuild with tiled walk-in shower, floating vanity, new fixtures, and modern lighting for a spa-like feel.</p>
+                </div>
+            </div>
+        </div>
         <div style="text-align: center; margin-top: 40px;">
-            <a href="#contact" class="btn btn-primary">View Our Projects</a>
+            <a href="contact.html" class="btn btn-primary">Start Your Project</a>
         </div>
     </section>
 
@@ -149,30 +196,73 @@
             <span class="area-tag">Oshawa</span>
             <span class="area-tag">Scarborough</span>
         </div>
-        <a href="#contact" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Check Availability in Your Area</a>
+        <a href="contact.html" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Check Availability in Your Area</a>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials">
-        <p class="testimonial-text">“Super Finish Renovations transformed our entire home—professional, fast, and flawless work.”</p>
-        <a href="#contact" class="btn btn-outline">Get Started Today</a>
+    <section id="testimonials-section" class="testimonials-section reveal">
+        <h2 style="text-align: center; margin-bottom: 10px;">What Our Clients Say</h2>
+        <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">Hear from homeowners who trusted us with their renovations.</p>
+        <div class="testimonials-grid reveal-stagger">
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-review">Super Finish transformed our outdated kitchen into something out of a magazine. Professional, on time, and on budget.</p>
+                <div class="star-rating">★★★★★</div>
+                <div class="testimonial-author">
+                    <strong>Sarah M.</strong>
+                    <span>North York</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-review">They finished our basement in 3 weeks. The quality of work is outstanding. Highly recommend!</p>
+                <div class="star-rating">★★★★★</div>
+                <div class="testimonial-author">
+                    <strong>James T.</strong>
+                    <span>Mississauga</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-review">Best renovation company in Toronto. Our bathroom looks absolutely stunning.</p>
+                <div class="star-rating">★★★★★</div>
+                <div class="testimonial-author">
+                    <strong>Priya K.</strong>
+                    <span>Scarborough</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-review">Honest pricing, clean work, zero stress. Will use them again for our second floor.</p>
+                <div class="star-rating">★★★★★</div>
+                <div class="testimonial-author">
+                    <strong>Ahmed R.</strong>
+                    <span>Brampton</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- STRONG CTA SECTION -->
-    <section id="contact" class="contact-section">
-        <h2 style="font-size: 3rem; margin-bottom: 20px;">Ready to Transform Your Space?</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 40px;">Get a Free Quote Today – Fast, Reliable, Professional Renovation Services Across the GTA</p>
-        <div class="cta-group">
+    <section id="contact" class="contact-section reveal">
+        <h2 style="margin-bottom: 20px;">Ready to Transform Your Space?</h2>
+        <p style="margin-bottom: 40px;">Get a Free Quote Today – Fast, Reliable, Professional Renovation Services Across the GTA</p>
+        <div class="cta-group reveal-stagger">
             <a href="tel:4168224701" class="btn btn-primary" style="background: white; color: var(--primary-dark);">Call or Text: 416-822-4701</a>
-            <a href="#" class="btn btn-outline">Request Your Free Estimate Online</a>
+            <a href="contact.html" class="btn btn-outline">Request Your Free Estimate Online</a>
         </div>
         <h3 style="margin-top: 40px; font-weight: 800; letter-spacing: 2px;">BOOK YOUR FREE CONSULTATION NOW</h3>
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="reveal">
         <div style="text-align: center;">
             <p>&copy; 2024 Super Finish Renovations. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="tel:4168224701">416-822-4701</a>
+            </div>
             <div class="footer-keywords">
                 <span>Home renovations Toronto</span> | 
                 <span>Renovation contractors GTA</span> | 
@@ -184,8 +274,10 @@
         </div>
     </footer>
 
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
     <script>
-        // Smooth scroll
+        // Smooth scroll for anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -196,6 +288,7 @@
                     });
                     // Close mobile menu if open
                     document.getElementById('nav-list').classList.remove('active');
+                    document.getElementById('mobile-menu').textContent = '☰';
                 }
             });
         });
@@ -206,6 +299,56 @@
 
         menuToggle.addEventListener('click', () => {
             navList.classList.toggle('active');
+        });
+
+        // Intersection Observer for reveal on scroll
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Scroll to Top Button Visibility
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Page Fade-out Transition on Link Click
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', e => {
+                const href = link.getAttribute('href');
+                if (href && !href.startsWith('#') && !href.startsWith('tel:') && !href.startsWith('mailto:') && !link.target) {
+                    e.preventDefault();
+                    document.body.classList.add('page-fade-out');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400);
+                }
+            });
         });
     </script>
 </body>
