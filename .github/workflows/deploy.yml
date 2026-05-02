@@ -26,6 +26,6 @@ jobs:
             mirror --reverse --delete --verbose \
               --exclude .git/ \
               --exclude .github/ \
-              ./ /public_html/;
+              ./ /superfinishrenovations.com/public_html/;
             quit
           "
